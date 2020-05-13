@@ -1,0 +1,34 @@
+{
+  "name": "devbsb-ui-kit",
+  "version": "1.0.2",
+  "main": "dist/index.js",
+  "author": {
+    "name": "Matheus Bastos",
+    "email": "matheusbastos@outlook.com",
+    "url": "http://devbsb.com.br/ui-kit/"
+  },
+  "license": "MIT",
+  "scripts": {
+    "storybook": "start-storybook -p 8080",
+    "build-storybook": "build-storybook -c .storybook -o .out",
+    "build": "tsc -p ."
+  },
+  "devDependencies": {
+    "@storybook/addon-centered": "^5.3.18",
+    "@storybook/addon-info": "^5.3.18",
+    "@storybook/react": "^5.3.18",
+    "@storybook/theming": "^5.3.18",
+    "@types/react": "^16.9.35",
+    "@types/styled-components": "^5.1.0",
+    "babel-loader": "^8.1.0",
+    "react": "^16.13.1",
+    "react-docgen-typescript-loader": "^3.7.2",
+    "react-icons": "^3.10.0",
+    "ts-loader": "^7.0.4",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "polished": "^3.6.3",
+    "styled-components": "^5.1.0"
+  }
+}

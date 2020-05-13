@@ -1,0 +1,12 @@
+# dependencies
+/node_modules
+
+#production
+/.out
+/dist
+
+# misc
+.DS_Store
+.env
+token.txt
+debug.log
