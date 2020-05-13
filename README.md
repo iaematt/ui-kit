@@ -9,7 +9,7 @@ Utilizado nesse projeto: _React, Typescript, Styled-Components, Storybook e Reac
 
 [Código da aplicação no GitHub](https://github.com/iaematt/ui-kit) 📝
 
-## Instalações e uso
+## Instalações e uso ⚙
 
 Crie um novo projeto com _create react-app_, ou utilize um existente e adicione o ui kit.
 
@@ -29,7 +29,7 @@ $ yarn start
 
 Pronto! Agora acesse nosso [storybook](https://devbsb.com.br/ui-kit/), para utilizar os components.
 
-### Exemplo de uso
+### Exemplo de uso ⌛
 
 Exemplo de uso do componente Spinner.
 
@@ -43,6 +43,29 @@ function Loading() {
 
 export default Loading;
 ```
+
+## Desenvolvimento 📌
+
+Clone ou faça o download [desse repositório](https://github.com/iaematt/ui-kit).
+
+```
+# Clone o repositório
+$ git clone https://github.com/iaematt/ui-kit
+
+# Acesse a pasta
+$ cd ui-kit/
+
+# Instale as dependencias
+$ yarn
+
+# Rode a aplicação
+$ yarn storybook
+
+# Para gerar sua aplicação
+$ yarn build-storybook
+```
+
+Acesse localhost:8080 em seu navegador.
 
 ## Licença
 
