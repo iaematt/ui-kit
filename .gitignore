@@ -1,12 +1,11 @@
 # dependencies
-/node_modules
+node_modules
 
 #production
-/.out
-/dist
+.out
+dist
 
 # misc
 .DS_Store
 .env
-token.txt
 debug.log

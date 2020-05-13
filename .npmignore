@@ -1,7 +1,14 @@
+.out
+.storybook
 node_modules
 src
 tsconfig.json
+stories
 
 .github
+.gitignore
 __tests__
 yarn-error.log
+debug.log
+README.md
+yarn.lock
