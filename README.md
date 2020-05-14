@@ -29,7 +29,18 @@ $ yarn start
 
 Pronto! Agora acesse nosso [storybook](https://devbsb.com.br/ui-kit/), para utilizar os components.
 
-### Exemplo de uso ⌛
+### Configuração e exemplo de uso ⌛
+
+Para não ter erros de css nas notificações, radio button e checkbox é preciso ter um arquivo de reset css no seu projeto, contendo:
+
+```
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+}
+```
 
 Exemplo de uso do componente Spinner.
 
@@ -43,6 +54,8 @@ function Loading() {
 
 export default Loading;
 ```
+
+Fonte recomendada para utilização do UI kit: **Roboto e Roboto Mono**.
 
 ## Desenvolvimento 📌
 

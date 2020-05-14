@@ -1,12 +1,26 @@
 {
   "name": "devbsb-ui-kit",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "dist/index.js",
   "author": {
     "name": "Matheus Bastos",
     "email": "matheusbastos@outlook.com",
     "url": "http://devbsb.com.br/ui-kit/"
   },
+  "keywords": [
+    "reactjs",
+    "react",
+    "typescript",
+    "storybook",
+    "ui",
+    "ui-kit",
+    "devbsb",
+    "components",
+    "input",
+    "spinner",
+    "animation",
+    "button"
+  ],
   "license": "MIT",
   "scripts": {
     "storybook": "start-storybook -p 8080",

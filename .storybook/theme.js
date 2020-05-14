@@ -16,5 +16,5 @@ export default create({
   barBg: "#222222",
 
   brandTitle: "DevBSB UI Kit",
-  brandUrl: "http://devbsb.com.br/db-ui-kit/",
+  brandUrl: "http://devbsb.com.br/ui-kit/",
 });

@@ -10,5 +10,4 @@ stories
 __tests__
 yarn-error.log
 debug.log
-README.md
 yarn.lock
