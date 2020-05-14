@@ -27,7 +27,7 @@ const RadioWrapper = forwardRef(
         {label}
 
         <Radio {...props} ref={ref} name={name} value={value} />
-        <Mark />
+        <Mark color={color} />
       </Label>
     );
   }

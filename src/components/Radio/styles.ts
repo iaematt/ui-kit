@@ -20,7 +20,7 @@ export const Label = styled.label`
 
   &:hover span,
   input:checked ~ span {
-    background-color: ${(props: Props) => props.color};
+    border-color: ${(props: Props) => props.color};
   }
 
   animation: fadeIn 380ms ease-in-out;
@@ -55,8 +55,8 @@ export const Mark = styled.span`
   left: 0;
   height: 22px;
   width: 22px;
-  background-color: rgba(255, 255, 255, 0.35);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background-color: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.35);
   border-radius: 50%;
 
   transition: all 180ms ease-in-out;
@@ -68,12 +68,13 @@ export const Mark = styled.span`
     position: absolute;
     display: none;
 
-    top: 6px;
-    left: 6px;
+    top: 5px;
+    left: 5px;
     width: 8px;
     height: 8px;
     border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: ${(props: Props) => props.color};
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
 
     border-radius: 50%;
 

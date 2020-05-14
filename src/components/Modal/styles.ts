@@ -32,6 +32,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
   width: 60%;
+  position: relative;
 
   padding: 20px;
 
@@ -69,9 +70,12 @@ export const Close = styled.button`
   position: absolute;
 
   margin-bottom: 24px;
-  background-color: #333333;
-  color: rgba(255, 255, 255, 0.3);
+  background-color: #292929;
   border-radius: 50%;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+
+  top: -6px;
+  right: -6px;
 
   width: 20px;
   height: 20px;
@@ -83,8 +87,38 @@ export const Close = styled.button`
   -webkit-transition: all 180ms ease-in-out;
   -moz-transition: all 180ms ease-in-out;
 
+  &:hover:after {
+    background-color: rgba(255, 255, 255, 0.7);
+  }
+
   &:hover {
-    color: rgba(255, 255, 255, 0.7);
-    background-color: #555555;
+    background-color: #e74c3c;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    display: block;
+
+    top: 6px;
+    left: 6px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+
+    border-radius: 50%;
+
+    animation: fadeIn 380ms ease-in-out;
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
   }
 `;

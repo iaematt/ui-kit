@@ -22,7 +22,7 @@ export const Modal: React.FC<Props> = ({
   return (
     <FullScreen open={open}>
       <Container {...props} title={title}>
-        <Close onClick={() => setOpen(false)}>&times;</Close>
+        <Close onClick={() => setOpen(false)}></Close>
 
         <h1>{title}</h1>
 

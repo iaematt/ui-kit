@@ -34,7 +34,7 @@ export const CheckBox = forwardRef(
         {label}
 
         <Box {...props} ref={ref} name={name} value={value} />
-        <Mark />
+        <Mark color={color} />
       </Label>
     );
   }
