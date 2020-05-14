@@ -1,6 +1,6 @@
 # DevBSB UI Kit 🌠
 
-![](https://devbsb.com.br:5000/files/234daa2a927fa910ceefd79f1f9ae355-ui-kit.png)
+![](https://devbsb.com.br:5000/files/cbed89715269628f0880404c2d484c8a-ui-kit.png)
 
 Esse UI kit foi criado para facilitar a criação de aplicações ReactJS, com componentes prontos para ser utilizados.
 Utilizado nesse projeto: _React, Typescript, Styled-Components, Storybook e React-Icons_.
