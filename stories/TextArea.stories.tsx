@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 
 import { TextArea } from "../src";
 
-storiesOf("Text Area", module)
+storiesOf("Form|Text Area", module)
   .add("Default", () => {
     const [value, setValue] = useState("");
 

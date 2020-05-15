@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 
 import { CheckBox } from "../src";
 
-storiesOf("CheckBox", module)
+storiesOf("Form|CheckBox", module)
   .add("CheckBox Group", () => {
     const allOptions = [
       { id: 1, value: "Alpha" },

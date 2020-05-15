@@ -3,7 +3,7 @@ import { storiesOf } from "@storybook/react";
 
 import { Radio } from "../src";
 
-storiesOf("Radio Group", module)
+storiesOf("Form|Radio Group", module)
   .add("Default", () => {
     const options = [
       { id: 1, value: "Easy" },

@@ -5,7 +5,7 @@ import { MdLock, MdMail } from "react-icons/md";
 
 import { Input } from "../src";
 
-storiesOf("Input", module)
+storiesOf("Form|Input", module)
   .add("Default", () => {
     const [value, setValue] = useState("");
 

@@ -4,8 +4,8 @@ import { Label } from "./styles";
 
 export interface Props {
   name: string;
-  value: string;
-  setValue: (text: string) => void;
+  value: string | number;
+  setValue: (event: any) => void;
   numberOfLines?: number;
   color?: string;
   placeholder?: string;
