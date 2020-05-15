@@ -12,12 +12,12 @@ export const Label = styled.label<ILabel>`
 
   margin-bottom: 10px;
 
-  opacity: ${({ disabled }) => (disabled ? "0.8" : "1")};
+  opacity: ${({ disabled }) => (disabled ? "0.7" : "1")};
   cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
 
   user-select: none;
 
-  color: #ffffff;
+  color: ${({ textColor }) => textColor};
   font-size: 16px;
 
   &:hover span,
@@ -32,7 +32,7 @@ export const Label = styled.label<ILabel>`
       opacity: 0;
     }
     to {
-      opacity: 1;
+      opacity: ${({ disabled }) => (disabled ? "0.7" : "1")};
     }
   }
 `;

@@ -15,8 +15,11 @@ export const Label = styled.label<ILabel>`
     padding: 16px;
     padding-left: ${(props) => (props.icon ? "40px" : "16px")};
 
-    color: #ffffff;
+    color: ${({ disabled }) =>
+      disabled ? "rgba(255, 255, 255, 0.3)" : "#ffffff"};
     font-size: 16px;
+
+    cursor: ${({ disabled }) => (disabled ? "not-allowed" : "text")};
 
     transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;

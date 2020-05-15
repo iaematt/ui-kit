@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { readableColor } from "polished";
 
 import { Props } from "./index";
 
@@ -14,7 +15,7 @@ export const Label = styled.label`
 
   user-select: none;
 
-  color: #ffffff;
+  color: ${(props: Props) => props.textColor};
   font-size: 16px;
 
   &:hover span,
@@ -22,7 +23,7 @@ export const Label = styled.label`
     border-color: ${(props: Props) => props.color};
   }
 
-  opacity: ${(props: Props) => (props.disabled ? "0.8" : "1")};
+  opacity: ${(props: Props) => (props.disabled ? "0.7" : "1")};
   cursor: ${(props: Props) => (props.disabled ? "not-allowed" : "pointer")};
 
   animation: fadeIn 380ms ease-in-out;
@@ -32,7 +33,7 @@ export const Label = styled.label`
       opacity: 0;
     }
     to {
-      opacity: ${(props: Props) => (props.disabled ? "0.8" : "1")};
+      opacity: ${(props: Props) => (props.disabled ? "0.7" : "1")};
     }
   }
 `;

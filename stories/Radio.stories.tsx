@@ -9,6 +9,8 @@ storiesOf("Radio Group", module)
       { id: 1, value: "Easy" },
       { id: 2, value: "Normal" },
       { id: 3, value: "Hard" },
+      { id: 4, value: "Very Hard" },
+      { id: 5, value: "Extreme please" },
     ];
 
     const [option, setOption] = useState(options[1].id);

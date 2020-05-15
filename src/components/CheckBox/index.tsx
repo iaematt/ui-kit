@@ -7,6 +7,7 @@ export interface Props {
   name: string;
   value: any;
   color?: string;
+  textColor?: string;
   defaultChecked?: boolean;
   checked?: boolean;
   readOnly?: boolean;
@@ -17,6 +18,7 @@ export interface Props {
 export interface ILabel {
   color?: string;
   disabled?: boolean;
+  textColor?: string;
 }
 
 export interface IBox {
@@ -24,7 +26,17 @@ export interface IBox {
 }
 
 export const CheckBox = forwardRef(
-  ({ label, name, value, color = "#4285F4", ...rest }: Props, ref) => {
+  (
+    {
+      label,
+      name,
+      value,
+      color = "#4285F4",
+      textColor = "#ffffff",
+      ...rest
+    }: Props,
+    ref
+  ) => {
     const { readOnly, onChange } = rest;
 
     return (
@@ -32,6 +44,7 @@ export const CheckBox = forwardRef(
         onClick={readOnly ? () => {} : onChange}
         htmlFor={name}
         color={color}
+        textColor={textColor}
         {...rest}
       >
         {label}

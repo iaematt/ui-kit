@@ -8,6 +8,7 @@ export interface Props {
   name: string;
   value: any;
   color?: string;
+  textColor?: string;
   defaultChecked?: boolean;
   checked?: boolean;
   readOnly?: boolean;
@@ -16,7 +17,17 @@ export interface Props {
 }
 
 const RadioWrapper = forwardRef(
-  ({ label, name, value, color = "#4285F4", ...rest }: Props, ref) => {
+  (
+    {
+      label,
+      name,
+      value,
+      color = "#4285F4",
+      textColor = "#ffffff",
+      ...rest
+    }: Props,
+    ref
+  ) => {
     const { readOnly, onChange } = rest;
 
     return (
@@ -24,6 +35,7 @@ const RadioWrapper = forwardRef(
         onClick={readOnly ? () => {} : onChange}
         htmlFor={name}
         color={color}
+        textColor={textColor}
         {...rest}
       >
         {label}

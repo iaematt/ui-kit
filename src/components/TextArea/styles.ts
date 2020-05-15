@@ -15,8 +15,10 @@ export const Label = styled.label<ILabel>`
     resize: none;
 
     padding: 16px;
-    color: #ffffff;
+    color: ${(props) => (props.disabled ? "rgba(255,255,255,0.3)" : "#ffffff")};
     font-size: 16px;
+
+    cursor: ${(props) => (props.disabled ? "not-allowed" : "text")};
 
     transition: all 0.2s ease-in-out;
     -webkit-transition: all 0.2s ease-in-out;
@@ -29,12 +31,12 @@ export const Label = styled.label<ILabel>`
         opacity: 0;
       }
       to {
-        opacity: ${(props) => (props.disabled ? "0.8" : "1")};
+        opacity: ${(props) => (props.disabled ? "0.7" : "1")};
       }
     }
 
     &:disabled {
-      opacity: 0.8;
+      opacity: 0.7;
       cursor: not-allowed;
     }
 
