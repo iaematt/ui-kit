@@ -32,6 +32,8 @@ storiesOf("Appearances", module).add("Default", () => {
   ];
   const [checkeds, setCheckeds] = useState([allOptions[2].id]);
 
+  const [value, setValue] = useState("");
+
   function toggleOption(id: number) {
     setCheckeds(
       checkeds.includes(id)
@@ -79,8 +81,19 @@ storiesOf("Appearances", module).add("Default", () => {
         }}
         autoComplete="off"
       >
-        <Input name="search" placeholder="Search..." />
-        <Input name="search" placeholder="Search..." icon={<MdSearch />} />
+        <Input
+          name="search"
+          placeholder="Search..."
+          value={value}
+          setValue={setValue}
+        />
+        <Input
+          name="search"
+          placeholder="Search..."
+          icon={<MdSearch />}
+          value={value}
+          setValue={setValue}
+        />
       </form>
 
       <div
@@ -89,7 +102,12 @@ storiesOf("Appearances", module).add("Default", () => {
           marginBottom: "15px",
         }}
       >
-        <TextArea name="message" placeholder="Type your message..." />
+        <TextArea
+          name="message"
+          placeholder="Type your message..."
+          value={value}
+          setValue={setValue}
+        />
       </div>
 
       <div

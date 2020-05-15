@@ -1,14 +1,37 @@
-import React from "react";
+import React, { useState } from "react";
 import { storiesOf } from "@storybook/react";
 
 import { TextArea } from "../src";
 
-storiesOf("Text Area", module).add("Default", () => (
-  <div style={{ width: "450px" }}>
-    <TextArea
-      name="message"
-      placeholder="Type your message..."
-      numberOfLines={5}
-    />
-  </div>
-));
+storiesOf("Text Area", module)
+  .add("Default", () => {
+    const [value, setValue] = useState("");
+
+    return (
+      <div style={{ width: "450px" }}>
+        <TextArea
+          name="message"
+          placeholder="Type your message..."
+          numberOfLines={5}
+          value={value}
+          setValue={setValue}
+        />
+      </div>
+    );
+  })
+  .add("Disabled", () => {
+    const [value, setValue] = useState("Your message here!");
+
+    return (
+      <div style={{ width: "450px" }}>
+        <TextArea
+          name="message"
+          placeholder="Type your message..."
+          numberOfLines={5}
+          value={value}
+          setValue={setValue}
+          disabled
+        />
+      </div>
+    );
+  });

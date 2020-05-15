@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const Label = styled.label`
+import { ILabel } from "./index";
+
+export const Label = styled.label<ILabel>`
   display: flex;
   position: relative;
 
@@ -27,8 +29,13 @@ export const Label = styled.label`
         opacity: 0;
       }
       to {
-        opacity: 1;
+        opacity: ${(props) => (props.disabled ? "0.8" : "1")};
       }
+    }
+
+    &:disabled {
+      opacity: 0.8;
+      cursor: not-allowed;
     }
 
     &::placeholder {

@@ -28,7 +28,7 @@ storiesOf("Radio Group", module)
       </form>
     );
   })
-  .add("Checked Radio", () => (
+  .add("Checked", () => (
     <Radio
       label="Checked"
       value="Checked"
@@ -37,7 +37,7 @@ storiesOf("Radio Group", module)
       readOnly
     />
   ))
-  .add("Unchecked Radio", () => (
+  .add("Unchecked", () => (
     <Radio
       label="Unchecked"
       value="Unchecked"
@@ -45,4 +45,22 @@ storiesOf("Radio Group", module)
       checked={false}
       readOnly
     />
+  ))
+  .add("Disabled", () => (
+    <>
+      <Radio
+        label="Checked disabled"
+        value="Checked disabled"
+        name="radio"
+        checked={true}
+        disabled
+      />
+      <Radio
+        label="Unchecked disabled"
+        value="Unchecked disabled"
+        name="radio"
+        checked={false}
+        disabled
+      />
+    </>
   ));

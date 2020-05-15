@@ -29,12 +29,12 @@ export const Container = styled.button<Props>`
       opacity: 0;
     }
     to {
-      opacity: ${(props) => (props.disabled ? "0.7" : "1")};
+      opacity: ${({ disabled }) => (disabled ? "0.8" : "1")};
     }
   }
 
   &:disabled {
-    opacity: 0.7;
+    opacity: 0.8;
     cursor: not-allowed;
   }
 

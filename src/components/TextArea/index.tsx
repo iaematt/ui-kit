@@ -4,6 +4,8 @@ import { Label } from "./styles";
 
 export interface Props {
   name: string;
+  value: string;
+  setValue: (text: string) => void;
   numberOfLines?: number;
   color?: string;
   placeholder?: string;
@@ -11,22 +13,33 @@ export interface Props {
    * resize area box: none or auto;
    */
   resize?: string;
+  required?: boolean;
+  disabled?: boolean;
+}
+
+export interface ILabel {
+  color?: string;
+  disabled?: boolean;
 }
 
 export const TextArea: React.FC<Props> = ({
   name,
+  value,
+  setValue,
   numberOfLines = 3,
   color = "#4285F4",
   placeholder,
-  ...props
+  ...rest
 }) => {
   return (
-    <Label htmlFor={name} color={color}>
+    <Label htmlFor={name} color={color} {...rest}>
       <textarea
         name={name}
         rows={numberOfLines}
         placeholder={placeholder}
-        {...props}
+        value={value}
+        onChange={(e) => setValue(e.target.value)}
+        {...rest}
       />
     </Label>
   );

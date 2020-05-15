@@ -12,7 +12,9 @@ export const Label = styled.label<ILabel>`
 
   margin-bottom: 10px;
 
-  cursor: pointer;
+  opacity: ${({ disabled }) => (disabled ? "0.8" : "1")};
+  cursor: ${({ disabled }) => (disabled ? "not-allowed" : "pointer")};
+
   user-select: none;
 
   color: #ffffff;

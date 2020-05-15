@@ -12,7 +12,6 @@ export const Label = styled.label`
 
   margin-bottom: 10px;
 
-  cursor: pointer;
   user-select: none;
 
   color: #ffffff;
@@ -23,6 +22,9 @@ export const Label = styled.label`
     border-color: ${(props: Props) => props.color};
   }
 
+  opacity: ${(props: Props) => (props.disabled ? "0.8" : "1")};
+  cursor: ${(props: Props) => (props.disabled ? "not-allowed" : "pointer")};
+
   animation: fadeIn 380ms ease-in-out;
 
   @keyframes fadeIn {
@@ -30,7 +32,7 @@ export const Label = styled.label`
       opacity: 0;
     }
     to {
-      opacity: 1;
+      opacity: ${(props: Props) => (props.disabled ? "0.8" : "1")};
     }
   }
 `;

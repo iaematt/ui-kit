@@ -29,7 +29,7 @@ export const Label = styled.label<ILabel>`
         opacity: 0;
       }
       to {
-        opacity: 1;
+        opacity: ${({ disabled }) => (disabled ? "0.8" : "1")};
       }
     }
 
@@ -56,7 +56,7 @@ export const Label = styled.label<ILabel>`
           opacity: 0;
         }
         to {
-          opacity: 1;
+          opacity: ${({ disabled }) => (disabled ? "0.8" : "1")};
         }
       }
     }

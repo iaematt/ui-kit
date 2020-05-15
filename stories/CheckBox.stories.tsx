@@ -38,7 +38,7 @@ storiesOf("CheckBox", module)
       </form>
     );
   })
-  .add("Checked Box", () => (
+  .add("Checked", () => (
     <CheckBox
       name="checkbox"
       label="Checked"
@@ -47,7 +47,7 @@ storiesOf("CheckBox", module)
       readOnly
     />
   ))
-  .add("Unchecked Box", () => (
+  .add("Unchecked", () => (
     <CheckBox
       name="checkbox"
       label="Unchecked"
@@ -55,4 +55,24 @@ storiesOf("CheckBox", module)
       checked={false}
       readOnly
     />
+  ))
+  .add("Disabled", () => (
+    <>
+      <CheckBox
+        name="checkbox"
+        label="Checked"
+        value="Checked"
+        checked={true}
+        readOnly
+        disabled
+      />
+      <CheckBox
+        name="checkbox"
+        label="Unchecked"
+        value="Unchecked"
+        checked={false}
+        readOnly
+        disabled
+      />
+    </>
   ));

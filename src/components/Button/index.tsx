@@ -30,14 +30,14 @@ export const Button: React.FC<Props> = ({
   backgroundColor = "#4285F4",
   color = "#ffffff",
   outlined = false,
-  ...props
+  ...rest
 }) => {
   return (
     <Container
       backgroundColor={backgroundColor}
       color={color}
       outlined={outlined}
-      {...props}
+      {...rest}
     >
       {children}
     </Container>
