@@ -17,7 +17,7 @@ storiesOf("Notification", module)
 
     return (
       <div style={{ width: "450px" }}>
-        <Notification>Testing the notification.</Notification>
+        <Notification marginBottom={10}>Testing the notification.</Notification>
 
         <br />
 

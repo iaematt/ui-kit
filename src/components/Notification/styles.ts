@@ -16,6 +16,8 @@ export const Container = styled.div<Props>`
   position: relative;
   padding-left: ${(props) => (props.icon ? "40px" : "16px")};
 
+  margin-bottom: ${(props) => `${props.marginBottom}px`};
+
   animation: fadeIn 500ms ease-in-out;
 
   @keyframes fadeIn {
@@ -37,3 +39,5 @@ export const Container = styled.div<Props>`
     top: 13px;
   }
 `;
+
+export const Content = styled.div``;

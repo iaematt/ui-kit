@@ -10,7 +10,7 @@ storiesOf("Modal", module).add("Default", () => {
     <>
       <Button onClick={() => setOpen(true)}>Open modal</Button>
 
-      <Modal title="Title" open={open} setOpen={setOpen}>
+      <Modal title="Title" open={open} setOpen={setOpen} width={40}>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea

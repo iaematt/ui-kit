@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import { IFullScreen } from "./index";
+import { IFullScreen, IContainer } from "./index";
 
 export const FullScreen = styled.div<IFullScreen>`
   position: fixed;
@@ -28,10 +28,10 @@ export const FullScreen = styled.div<IFullScreen>`
   }
 `;
 
-export const Container = styled.div`
+export const Container = styled.div<IContainer>`
   display: flex;
   flex-direction: column;
-  width: 60%;
+  width: ${(props) => props.width}%;
   position: relative;
 
   padding: 20px;
@@ -63,6 +63,8 @@ export const Container = styled.div`
     margin-bottom: 28px;
   }
 `;
+
+export const Content = styled.div``;
 
 export const Close = styled.button`
   cursor: pointer;

@@ -4,7 +4,7 @@ import { Label } from "./styles";
 
 export interface Props {
   name: string;
-  value: string | number;
+  value: string | number | undefined;
   setValue: (event: any) => void;
   type?: string;
   color?: string;
