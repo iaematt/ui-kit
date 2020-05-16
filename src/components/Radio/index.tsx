@@ -4,26 +4,57 @@ import React, { forwardRef } from "react";
 import { Label, Radio, Mark } from "./styles";
 
 export interface Props {
+  /**
+   * Radio label
+   */
   label: string;
+  /**
+   * Radio name
+   */
   name: string;
+  /**
+   * Value
+   */
   value: any;
+
+  /**
+   * Text color
+   */
   color?: string;
-  textColor?: string;
-  defaultChecked?: boolean;
+  /**
+   * Checked
+   */
   checked?: boolean;
-  readOnly?: boolean;
-  onChange?: () => void;
+  /**
+   * Default checked
+   */
+  defaultChecked?: boolean;
+  /**
+   * Disabled
+   */
   disabled?: boolean;
+  /**
+   * Funcion on change
+   */
+  onChange?: () => void;
+  /**
+   * Radio color
+   */
+  radioColor?: string;
+  /**
+   * readOnly
+   */
+  readOnly?: boolean;
 }
 
-const RadioWrapper = forwardRef(
+export const RadioWrapper = forwardRef(
   (
     {
       label,
       name,
       value,
-      color = "#4285F4",
-      textColor = "#ffffff",
+      radioColor = "#4285F4",
+      color = "#ffffff",
       ...rest
     }: Props,
     ref
@@ -34,14 +65,14 @@ const RadioWrapper = forwardRef(
       <Label
         onClick={readOnly ? () => {} : onChange}
         htmlFor={name}
+        radioColor={radioColor}
         color={color}
-        textColor={textColor}
         {...rest}
       >
         {label}
 
         <Radio ref={ref} name={name} value={value} {...rest} />
-        <Mark color={color} />
+        <Mark radioColor={radioColor} />
       </Label>
     );
   }

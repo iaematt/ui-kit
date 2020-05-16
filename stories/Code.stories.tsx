@@ -15,7 +15,7 @@ storiesOf("Code Block", module).add("Default", () => (
 
     <br />
 
-    <Code backgroundColor="#4285F4">
+    <Code backgroundColor="#eeeeee">
       # first create project{`\n`}$ yarn create react-app my-app
       {`\n`}
       {`\n`}# access the folder

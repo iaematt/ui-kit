@@ -1,22 +1,20 @@
 import styled from "styled-components";
+import { readableColor, backgroundImages } from "polished";
 
 import { IFullScreen, IContainer } from "./index";
 
 export const FullScreen = styled.div<IFullScreen>`
+  align-items: center;
+  animation: fadeIn 380ms ease-in-out;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: ${({ open }) => (open ? "flex" : "none")};
+  bottom: 0;
+  justify-content: center;
   position: fixed;
-  top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-
-  background-color: rgba(0, 0, 0, 0.7);
-  display: ${(props) => (props.open ? "flex" : "none")};
-  justify-content: center;
-  align-items: center;
-
+  top: 0;
   z-index: 9999;
-
-  animation: fadeIn 380ms ease-in-out;
 
   @keyframes fadeIn {
     from {
@@ -29,19 +27,20 @@ export const FullScreen = styled.div<IFullScreen>`
 `;
 
 export const Container = styled.div<IContainer>`
+  animation: sideIn 350ms cubic-bezier(0.42, 0, 0.21, 1);
+  background-color: ${({ backgroundColor }) => backgroundColor};
+  border-radius: 8px;
+  color: ${({ backgroundColor }) =>
+    readableColor(
+      backgroundColor as string,
+      "#111111",
+      "rgba(255,255,255,0.8)"
+    )};
   display: flex;
   flex-direction: column;
-  width: ${(props) => props.width}%;
-  position: relative;
-
   padding: 20px;
-
-  background-color: #191919;
-  border-radius: 8px;
-
-  color: #c4c4c4;
-
-  animation: sideIn 350ms cubic-bezier(0.42, 0, 0.21, 1);
+  position: relative;
+  width: ${({ width }) => width};
 
   @keyframes sideIn {
     from {
@@ -58,32 +57,34 @@ export const Container = styled.div<IContainer>`
   }
 
   h1 {
-    color: #ffffff;
-    font-size: 24px;
-    margin-bottom: 28px;
+    color: ${({ backgroundColor }) =>
+      readableColor(
+        backgroundColor as string,
+        "#111111",
+        "rgba(255,255,255,0.8)"
+      )};
+    font-size: 22px;
+    margin-bottom: 15px;
   }
 `;
 
 export const Content = styled.div``;
 
 export const Close = styled.button`
-  cursor: pointer;
   align-self: flex-end;
-  position: absolute;
-
-  margin-bottom: 24px;
   background-color: #292929;
+  border: none;
   border-radius: 50%;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
-
-  top: -6px;
-  right: -6px;
-
-  width: 20px;
-  height: 20px;
-  border: none;
+  cursor: pointer;
   font-size: 13px;
+  height: 20px;
+  margin-bottom: 24px;
+  position: absolute;
+  right: -6px;
   text-align: center;
+  top: -6px;
+  width: 20px;
 
   transition: all 180ms ease-in-out;
   -webkit-transition: all 180ms ease-in-out;
@@ -94,25 +95,21 @@ export const Close = styled.button`
   }
 
   &:hover {
-    background-color: #e74c3c;
+    background-color: #c00;
   }
 
   &:after {
-    content: "";
-    position: absolute;
-    display: block;
-
-    top: 6px;
-    left: 6px;
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.2);
-    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-
-    border-radius: 50%;
-
     animation: fadeIn 380ms ease-in-out;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+    content: "";
+    display: block;
+    left: 6px;
+    height: 8px;
+    position: absolute;
+    top: 6px;
+    width: 8px;
 
     @keyframes fadeIn {
       from {

@@ -4,25 +4,21 @@ import { lighten, darken, readableColor } from "polished";
 import { Props } from "./index";
 
 export const Container = styled.button<Props>`
-  background-color: ${({ backgroundColor, outlined }) =>
-    outlined ? "transparent" : backgroundColor};
+  background-color: ${({ buttonColor, outlined }) =>
+    outlined ? "transparent" : buttonColor};
+  border: 2px solid ${({ buttonColor }) => buttonColor};
+  color: ${({ color, buttonColor }) =>
+    color ? color : readableColor(buttonColor as string, "#111111", "#ffffff")};
 
-  color: ${({ backgroundColor }) =>
-    readableColor(backgroundColor as string, "#ffffff", "#111111")};
-
-  border: 2px solid ${({ backgroundColor }) => backgroundColor};
-
+  animation: fadeIn 380ms ease-in-out;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
   padding: 16px 45px;
   text-transform: uppercase;
-  font-weight: bold;
-  cursor: pointer;
-  border-radius: 4px;
-
   transition: all 0.2s ease-in-out;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
-
-  animation: fadeIn 380ms ease-in-out;
 
   @keyframes fadeIn {
     from {
@@ -34,20 +30,20 @@ export const Container = styled.button<Props>`
   }
 
   &:disabled {
-    opacity: 0.8;
     cursor: not-allowed;
+    opacity: 0.8;
   }
 
   &:hover:not(:disabled) {
-    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.25);
+    background-color: ${({ buttonColor, outlined }) =>
+      outlined ? buttonColor : lighten(0.04, buttonColor as string)};
     border-color: transparent;
-    background-color: ${({ backgroundColor, outlined }) =>
-      outlined ? backgroundColor : lighten(0.03, backgroundColor as string)};
+    box-shadow: 0 8px 8px rgba(0, 0, 0, 0.25);
   }
 
   :active:not(:disabled) {
+    background-color: ${({ buttonColor }) =>
+      darken(0.05, buttonColor as string)};
     box-shadow: 0 8px 8px rgba(0, 0, 0, 0.25);
-    background-color: ${({ backgroundColor }) =>
-      darken(0.03, backgroundColor as string)};
   }
 `;

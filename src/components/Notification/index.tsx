@@ -3,8 +3,17 @@ import React from "react";
 import { Container, Content } from "./styles";
 
 export interface Props {
+  /**
+   * Background color
+   */
   backgroundColor?: string;
+  /**
+   * Margin bottom of notification
+   */
   marginBottom?: number;
+  /**
+   * Icon <ReactComponent />
+   */
   icon?: React.ReactNode | React.Component;
 }
 

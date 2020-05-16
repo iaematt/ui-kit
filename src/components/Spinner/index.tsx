@@ -3,7 +3,13 @@ import React from "react";
 import { Loader } from "./styles";
 
 export interface Props {
+  /**
+   * Spinner color
+   */
   color?: string;
+  /**
+   * Background color
+   */
   backgroundColor?: string;
 }
 

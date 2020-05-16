@@ -3,10 +3,26 @@ import React from "react";
 import { FullScreen, Container, Content, Close } from "./styles";
 
 interface Props {
+  /**
+   * Boolean to display modal
+   */
   open: boolean;
+  /**
+   * Function to close the modal
+   */
   setOpen: (newValue: boolean) => void;
-  title: string;
-  width?: number;
+  /**
+   * Background color
+   */
+  backgroundColor?: string;
+  /**
+   * Title
+   */
+  title?: string;
+  /**
+   * Width size percentage or pixel, ex: 70% or 450px
+   */
+  width?: string;
 }
 
 export interface IFullScreen {
@@ -14,23 +30,24 @@ export interface IFullScreen {
 }
 
 export interface IContainer {
-  width: number;
+  backgroundColor?: string;
+  width?: string;
 }
 
 export const Modal: React.FC<Props> = ({
   children,
   open,
   setOpen,
+  backgroundColor = "#222222",
   title,
-  width = 60,
-  ...rest
+  width = "70%",
 }) => {
   return (
     <FullScreen open={open}>
-      <Container title={title} width={width} {...rest}>
+      <Container backgroundColor={backgroundColor} width={width}>
         <Close onClick={() => setOpen(false)}></Close>
 
-        <h1>{title}</h1>
+        {title && <h1>{title}</h1>}
 
         <Content>{children}</Content>
       </Container>

@@ -3,36 +3,105 @@ import React from "react";
 import { Label } from "./styles";
 
 export interface Props {
+  /**
+   * Input name
+   */
   name: string;
-  value: string | number | undefined;
+  /**
+   * Function to change the value
+   */
   setValue: (event: any) => void;
-  type?: string;
+  /**
+   * Value
+   */
+  value: string | number | undefined;
+
+  /**
+   * Background color
+   */
+  backgroundColor?: string;
+  /**
+   * Border color
+   */
+  borderColor?: string;
+  /**
+   * Color
+   */
   color?: string;
-  placeholder?: string;
-  icon?: React.ReactNode | React.Component;
-  required?: boolean;
-  min?: number;
-  max?: number;
+  /**
+   * Disabled input
+   */
   disabled?: boolean;
+  /**
+   * Icon <ReactComponent />
+   */
+  icon?: React.ReactNode | React.Component;
+  /**
+   * Required type: number, max value
+   */
+  max?: number;
+  /**
+   * Required type: number, minimal value
+   */
+  min?: number;
+  /**
+   * Placeholder text
+   */
+  placeholder?: string;
+  /**
+   * Required input
+   */
+  required?: boolean;
+  /**
+   * Type, ex: (text, number, password)
+   */
+  type?: string;
 }
 
 export interface ILabel {
-  icon?: React.ReactNode | React.Component;
+  /**
+   * Background color
+   */
+  backgroundColor?: string;
+  /**
+   * Border color
+   */
+  borderColor?: string;
+  /**
+   * Color
+   */
+  color?: string;
+  /**
+   * Disabled input
+   */
   disabled?: boolean;
+  /**
+   * Icon <ReactComponent />
+   */
+  icon?: React.ReactNode | React.Component;
 }
 
 export const Input: React.FC<Props> = ({
   name,
-  value,
   setValue,
-  type = "text",
-  color = "#4285F4",
-  placeholder,
+  value,
+  backgroundColor = "#191919",
+  borderColor = "#4285F4",
+  color = "#ffffff",
   icon,
+  placeholder,
+  type = "text",
   ...rest
 }) => {
   return (
-    <Label htmlFor={name} color={color} icon={icon} {...rest}>
+    <Label
+      htmlFor={name}
+      backgroundColor={backgroundColor}
+      borderColor={borderColor}
+      color={color}
+      icon={icon}
+      {...rest}
+    >
       <input
         name={name}
         type={type}

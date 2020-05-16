@@ -13,8 +13,8 @@ export default create({
 
   barTextColor: "#e6e6e6",
   barSelectedColor: "#ffffff",
-  barBg: "#222222",
+  barBg: "#333333",
 
-  brandTitle: "DevBSB UI Kit",
+  brandTitle: "UI Kit",
   brandUrl: "http://devbsb.com.br/ui-kit/",
 });

@@ -155,14 +155,16 @@ storiesOf("Appearances", module).add("Default", () => {
           marginBottom: "10px",
         }}
       >
-        <Button>Default</Button>
-        <Button outlined onClick={() => setOpen(true)}>
+        <Button color="#fff">Default</Button>
+        <Button color="#fff" outlined onClick={() => setOpen(true)}>
           Open Modal
         </Button>
-        <Button disabled>Desabled</Button>
+        <Button color="#fff" disabled>
+          Desabled
+        </Button>
       </div>
 
-      <Modal title="Title" open={open} setOpen={setOpen}>
+      <Modal title="Title" open={open} setOpen={setOpen} width="500px">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea

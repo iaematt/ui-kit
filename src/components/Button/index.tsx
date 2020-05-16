@@ -4,41 +4,35 @@ import { Container } from "./styles";
 
 export interface Props {
   /**
-   * Background color of button
+   * Background or border color of button
    */
-  backgroundColor?: string;
+  buttonColor?: string;
   /**
-   * Color text
+   * Text color, * recommended for outlined button
    */
   color?: string;
   /**
-   * Outline button
+   * Outlined button
    */
   outlined?: boolean;
   /**
-   * Disabled
+   * Disabled button
    */
   disabled?: boolean;
   /**
-   * Funcion on click
+   * Function on click
    */
   onClick?: () => void;
 }
 
 export const Button: React.FC<Props> = ({
   children,
-  backgroundColor = "#4285F4",
-  color = "#ffffff",
+  buttonColor = "#4285F4",
   outlined = false,
   ...rest
 }) => {
   return (
-    <Container
-      backgroundColor={backgroundColor}
-      color={color}
-      outlined={outlined}
-      {...rest}
-    >
+    <Container buttonColor={buttonColor} outlined={outlined} {...rest}>
       {children}
     </Container>
   );

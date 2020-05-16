@@ -8,9 +8,11 @@ storiesOf("Modal", module).add("Default", () => {
 
   return (
     <>
-      <Button onClick={() => setOpen(true)}>Open modal</Button>
+      <Button color="#ffffff" onClick={() => setOpen(true)}>
+        Open modal
+      </Button>
 
-      <Modal title="Title" open={open} setOpen={setOpen} width={40}>
+      <Modal title="Title" open={open} setOpen={setOpen} width="500px">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
         veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea

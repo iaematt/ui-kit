@@ -15,6 +15,7 @@ storiesOf("Form|Text Area", module)
           numberOfLines={5}
           value={value}
           setValue={setValue}
+          resize="none"
         />
       </div>
     );
@@ -30,6 +31,7 @@ storiesOf("Form|Text Area", module)
           numberOfLines={5}
           value={value}
           setValue={setValue}
+          resize="none"
           disabled
         />
       </div>
